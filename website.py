@@ -58,4 +58,13 @@ with left_column:
     markdown(contact, unsafe_allow_html=True)
 with right_column:
     empty()
-write("[ Facebook >](https://www.facebook.com/rnzrmbln)" "       |       [ Instagram >](https://www.instagram.com/kith_rrr)")
+markdown("""
+<div style="text-align: center;">
+    <p>
+        <a href="https://www.facebook.com/rnzrmbln">FACEBOOK </a> | 
+        <a href="https://www.instagram.com/kith_rrr">INSTAGRAM </a> |
+        <a href="https://github.com/neophytekeith">GITHUB </a> 
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
