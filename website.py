@@ -19,12 +19,17 @@ def load_lottieurl(url):
     return r.json()
 
 lottie_coding = load_lottieurl("https://lottie.host/0de42146-b608-492a-8e47-2a9dec937f6d/78WXdFxMQs.json")
+lottie_robot = load_lottieurl("https://lottie.host/d698fee8-07c0-4052-b415-975a5f8eae69/XTxe2VPFJa.json")
 
 with container():
-    markdown("<h3>Hi, I'm <span style='color: #FF5733;'>Keith!</span></h3>", unsafe_allow_html=True)
-    markdown("<h4><strong> A second year <span style='color: #02fa0b;'>computer science</span> student. </strong></h4>", unsafe_allow_html=True)
-    write(f"I’m passionate about coding, technology, and exploring new tools in the field.")
-    write("Currently honing my skills inweb development and problem solving, I’m always eager to learn and grow in the tech world.")
+    left_column, right_column = columns(2)
+    with left_column:
+        markdown("<h3>Hi, I'm <span style='color: #FF5733;'>Keith!</span></h3>", unsafe_allow_html=True)
+        markdown("<h4><strong> A second year <span style='color: #02fa0b;'>computer science</span> student. </strong></h4>", unsafe_allow_html=True)
+        write(f"I’m passionate about coding, technology, and exploring new tools in the field.")
+        write("Currently honing my skills in web development and problem solving, I’m always eager to learn and grow in the tech world.")
+    with right_column:
+        st_lottie(lottie_robot, height=300, key="robot")
 
 with container():
     write("---")
