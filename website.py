@@ -5,6 +5,13 @@ from streamlit_lottie import st_lottie
 #https://www.webfx.com/tools/emoji-cheat-sheet/
 set_page_config(page_title="Website ni Keith", page_icon="👾", layout="wide")
 
+def local_css(file_name):
+    with open(file_name) as f:
+        markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+
+local_css(r"C:\Users\rnzrm\Pycharm_Professional_Files\streamlit_app\style.css")
+
 def load_lottieurl(url):
     r = requests.get(url)
     if r.status_code != 200:
@@ -31,7 +38,21 @@ with container():
             In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.
               """
         )
-        write("[ Facebook >](https://www.facebook.com/rnzrmbln)")
+        write("[ Facebook >](https://www.facebook.com/rnzrmbln)" "       |       [ Instagram >](https://www.instagram.com/kith_rrr)")
     with right_column:
         st_lottie(lottie_coding, height=300, key="coding")
 
+contact = """
+<form action="https://formsubmit.co/14keithcs@email.com" method="POST">
+     <input type="hidden" name="_captcha" value="false">
+     <input type="text" name="name" placeholder="Your name" required>
+     <input type="email" name="email" placeholder="Your email"  required>
+     <textarea name="message" placeholder = "Your message"  required></textarea>
+     <button type="submit">Send</button>
+</form>
+"""
+left_column, right_column = columns(2)
+with left_column:
+    markdown(contact, unsafe_allow_html=True)
+with right_column:
+    empty()
