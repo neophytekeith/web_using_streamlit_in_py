@@ -10,7 +10,7 @@ def local_css(file_name):
         markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-local_css(r"C:\Users\rnzrm\Pycharm_Professional_Files\streamlit_app\style.css")
+local_css("style.css")
 
 def load_lottieurl(url):
     r = requests.get(url)
