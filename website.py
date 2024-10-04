@@ -38,9 +38,11 @@ with container():
             In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.
               """
         )
-        write("[ Facebook >](https://www.facebook.com/rnzrmbln)" "       |       [ Instagram >](https://www.instagram.com/kith_rrr)")
     with right_column:
         st_lottie(lottie_coding, height=300, key="coding")
+        
+write("---")
+markdown("<h2>Contact Me</h2>", unsafe_allow_html=True)
 
 contact = """
 <form action="https://formsubmit.co/14keithcs@email.com" method="POST">
@@ -56,3 +58,4 @@ with left_column:
     markdown(contact, unsafe_allow_html=True)
 with right_column:
     empty()
+write("[ Facebook >](https://www.facebook.com/rnzrmbln)" "       |       [ Instagram >](https://www.instagram.com/kith_rrr)")
