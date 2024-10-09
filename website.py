@@ -52,6 +52,7 @@ markdown("<h2>Contact Me</h2>", unsafe_allow_html=True)
 contact = """
 <form action="https://submit-form.com/oztAIJPms" method="POST">
      <input type="hidden" name="_captcha" value="false">
+     <input type="hidden" name="_redirect" value="https://keithwebusingstinpy.streamlit.app/">
      <input type="text" name="name" placeholder="Your name" required>
      <input type="email" name="email" placeholder="Your email"  required>
      <textarea name="message" placeholder = "Your message"  required></textarea>
