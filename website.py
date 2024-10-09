@@ -50,7 +50,7 @@ write("---")
 markdown("<h2>Contact Me</h2>", unsafe_allow_html=True)
 
 contact = """
-<form action="https://formsubmit.co/14keithcs@email.com" method="POST">
+<form action="https://submit-form.com/oztAIJPms" method="POST">
      <input type="hidden" name="_captcha" value="false">
      <input type="text" name="name" placeholder="Your name" required>
      <input type="email" name="email" placeholder="Your email"  required>
